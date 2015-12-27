@@ -1,0 +1,24 @@
+---
+title: 'Coursera: Getting and Cleaning Data -- Course Project README'
+author: "Jonathan L. Marrero"
+date: "December 27, 2015"
+output: html_document
+---
+
+This document outlines the purpose and use of the files contained in this repository.
+
+### **Files**
+
+This repository contains the following files:
+
+* **"run_analysis.R"**: An R script that combines, renames, and summarizing data from the "UCI HAR Dataset". The original dataset can be found here: [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
+* **"tidayData.txt"**: These data reflect the result of the "run_analyis.R" script. 
+* **"CodeBook.md"**: A detailed description of the variables contained in "run_analysis.R" and the resulting dataset "tidayData.txt".
+
+### **How "r_analysis.R" Works**
+
+The following assumes the "UCI HAR Dataset" (UCI) is in your working directory. 
+
+The purpose of "run_analysis.R" is to combine, rename, and summarize two datasets within the UCI dataset: "test" and "train". 
+
+The script first reads in the "test" and "train" datasets from the UCI dataset. It then combines the "x", "y", and "subject" datasets found in both the "test" and "train" files. After combining the "test" and "train" datasets, the "run_alysis.R" script extracts variables containing the phrases "mean" and "std". The script then updates the variable data within the new "y" dataset with descriptive names. It then does the same for the "x" variable names. Finally, the script combines the "x", "y", and "subject" data and exports a clean dataset named "tidyData.txt". 

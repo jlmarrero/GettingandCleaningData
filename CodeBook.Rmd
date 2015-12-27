@@ -1,0 +1,19 @@
+---
+title: 'Coursera: Getting and Cleaning Data -- Course Project Code Book'
+author: "JLM"
+date: "December 27, 2015"
+output: html_document
+---
+
+This document outlines the variables contained with "run_analysis.R".
+
+### **Variables**
+
+* ```y_test, x_test, subject_test, x_train, y_train, and subject_train``` represent the data found within the original "UCI HAR Dataset".
+* ```y_new, x_new, subject_new``` are the result of combining the "y", "x", and "subject" data found in the original "UCI HAR Dataset".
+* ```feat`` contains the variable names contained in the "features.txt" file within the "UCI HAR Dataset".
+* ```clean``` contains a version of ```x_new``` that has been de-duplicated. 
+* ```xstd and xmean``` are subset datasets of ```x_new``` where each dataset contains the variables that contained either "std" or "mean" in the variable name. 
+* ```xnew.1``` is a the merger of ```xstd and xmean```
+* ```allData``` is ther merger of ```subject_new, y_new, and xnew.1```. 
+* ```tidayData``` is a summary of the means of each variable in ```allData``` organized by "Subject" and "Activity".
